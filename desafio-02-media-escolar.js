@@ -22,3 +22,4 @@
     else {
         document.write('Reprovado com média ' + media.toFixed(1));
     }
+    

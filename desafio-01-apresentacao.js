@@ -14,3 +14,4 @@
     else {
     console.log('Olá, ' + nome + '! Você possui ' + idade + ' anos, mora em ' + cidade + ' e é menor de idade.')
     }
+    
