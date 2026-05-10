@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pergunta País</title>
+    <style>
+        body {
+            background-color: #f7f7f7;
+            font: normal 18pt;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        input {
+            font: normal 12pt Arial;
+        }
+        button {
+            font: normal 12pt Arial;
+        }
+        #live {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Qual País Você Vive?</h1>
+    <input type="text" name="txtcountry" id="txtcountry">
+    <input type="button" value="Confirmar" onclick="escrever()">
+    <div id="live">Você vive em: ...</div>
+    <div id="res"></div>
+    <script>
+        function escrever() {
+            var txtcountry = window.document.getElementById('txtcountry');
+            // .value sempre retorna string, mesmo que o conteúdo seja um número.
+            var tc = (txtcountry.value);
+            var live = window.document.getElementById('live');
+            var res = window.document.getElementById('res');
+            live.innerHTML = `Você vive em: <strong>${tc}</strong>...`;
+            var tcres = tc.toLowerCase()
+
+            if (tcres == '') {
+                res.innerHTML = `Por gentileza, digite um país.`;
+            }
+            
+            else if (tcres == 'brasil') {
+                res.innerHTML = `Você é <strong>Brasileiro!</strong>`;
+            }
+
+            else {
+                res.innerHTML = `Você é <strong>Estrangeiro!</strong>`;
+            }
+
+        }
+        
+    </script>
+</body>
+</html>
